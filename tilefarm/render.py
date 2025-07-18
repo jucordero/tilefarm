@@ -8,7 +8,7 @@ from core import pixelmap
 
 TILE_WIDTH = 32
 TILE_HEIGHT = 16
-TILE_THICK = 12
+TILE_THICK = 32
 
 def load_tile_variants(types, base_path="assets"):
     tile_variants = {}
@@ -81,10 +81,10 @@ def render(
     pyg.quit()
 
 if __name__ == "__main__":
-    render([10,2,12],
-           ['water', 'urban', 'grass'],
+    render([10,2,12, 3],
+           ['forest', 'wheat', 'grass', 'sheep'],
            tile_size=(20, 20),
-           scale=0.5,
+        #    scale=0.5,
            method='treemap',
            padding=(10, 10),
            )
