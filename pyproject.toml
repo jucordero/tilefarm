@@ -1,0 +1,26 @@
+[project]
+name = "tilefarm"
+version = "0.1.0"
+description = "Generate 2D isometric visualizations of land use with squarified treemaps."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [{ name="Juan P. Cordero", email="jpc563@york.ac.uk" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pygame",
+    "squarify",
+    "numpy",
+    "matplotlib"
+]
+
+[project.urls]
+Homepage = "https://github.com/jucordero/tilefarm"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

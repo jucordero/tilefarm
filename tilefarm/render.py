@@ -4,13 +4,14 @@ import os
 import random
 from typing import Literal
 
-from core import pixelmap
+from .core import pixelmap
 
 TILE_WIDTH = 32
 TILE_HEIGHT = 16
-TILE_THICK = 32
+TILE_THICK = 48
 
-def load_tile_variants(types, base_path="assets"):
+def load_tile_variants(types):
+    base_path = os.path.join(os.path.dirname(__file__), "assets")
     tile_variants = {}
     for t in types:
         path = os.path.join(base_path, t)
@@ -81,10 +82,9 @@ def render(
     pyg.quit()
 
 if __name__ == "__main__":
-    render([10,2,12, 3],
-           ['forest', 'wheat', 'grass', 'sheep'],
-           tile_size=(20, 20),
-        #    scale=0.5,
+    render(np.random.rand(6),
+           ['forest', 'wheat', 'grass', 'sheep', 'water', 'urban'],
+           tile_size=(10, 10),
            method='treemap',
            padding=(10, 10),
            )
